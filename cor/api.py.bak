@@ -23,7 +23,7 @@ class CORModule:
 		self.register_topic("ModuleRecover", lifecycle.ModuleRecover, self.on_recover)
 		self.register_topic("ModuleParameters", lifecycle.ModuleParameters, self.on_parameters_received)
 		self.register_type("Log", log.Log)
-		print(("Initializaing %s" % type(self).__name__))
+		print("Initializaing %s" % type(self).__name__)
 
 	def add_topic(self, type, callback):
 		self.consumes[type] = callback
